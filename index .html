@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIT Warangal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <header class="top-bar">
+        <div class="container">
+            <div class="logo-section">
+                <img src="logo.png" alt="NITW Logo" class="logo">
+                <h1 class="institute-name">National Institute of Technology Warangal</h1>
+                <h1 class="institute-name-mobile">NITW</h1>
+            </div>
+            <button class="menu-button">☰</button>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Campus Life</a></li>
+                <li><a href="#">Placements</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Announcements -->
+    <div class="announcements">
+        <div class="marquee">
+            <span>⚡ Admissions Open for Academic Year 2025-26</span>
+            <span>⚡ New Research Collaboration with Industry Partners</span>
+            <span>⚡ Upcoming International Conference on Technology</span>
+            <span>⚡ Campus Placement Drive Starting Next Week</span>
+        </div>
+    </div>
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="https://nitw.ac.in/api/static/files/welcome_to_NIT_WARANGAL_2023-4-15-16-35-49.jpg"
+                    alt="Campus 1">
+            </div>
+            <div class="slide">
+                <img src="https://nitw.ac.in/api/static/files/library_2022-7-15-7-21-31.jpg" alt=" Campus 2">
+            </div>
+            <div class="slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlt8etwboFrRD8gIymalIglwPBagz79-qteeVMLxl8Ahkq-XQ4Hi8BPZE&s"
+                    alt="Campus 3">
+            </div>
+        </div>
+        <button class="slider-btn prev">❮</button>
+        <button class="slider-btn next">❯</button>
+    </div>
+
+    <!-- News & Events -->
+    <section class="news-events">
+        <div class="container">
+            <div class="news-section">
+                <h2>News</h2>
+                <div class="news-item">
+                    <h3>International Conference on Emerging Technologies</h3>
+                    <p class="date">March 15, 2025</p>
+                    <span class="tag">Academic</span>
+                </div>
+                <div class="news-item">
+                    <h3>Research Paper Presentation Competition</h3>
+                    <p class="date">March 20, 2025</p>
+                    <span class="tag">Research</span>
+                </div>
+                <div class="news-item">
+                    <h3>Annual Technical Festival</h3>
+                    <p class="date">April 5, 2025</p>
+                    <span class="tag">Cultural</span>
+                </div>
+            </div>
+            <div class="events-section">
+                <h2>Events</h2>
+                <div class="news-item">
+                    <h3>Annual Technical Festival</h3>
+                    <p class="date">April 5, 2025</p>
+                    <span class="tag">Cultural</span>
+                </div>
+                <div class="news-item">
+                    <h3>Research Paper Presentation Competition</h3>
+                    <p class="date">March 20, 2025</p>
+                    <span class="tag">Research</span>
+                </div>
+                <div class="news-item">
+                    <h3>International Conference on Emerging Technologies</h3>
+                    <p class="date">March 15, 2025</p>
+                    <span class="tag">Academic</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Campus Life -->
+    <section class="campus-life">
+        <div class="container">
+            <h2>Campus Life</h2>
+            <div class="campus-grid">
+                <div class="campus-card">
+                    <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&q=80&w=600"
+                        alt="Academic Buildings">
+                    <div class="card-overlay">
+                        <h3>Academic Buildings</h3>
+                    </div>
+                </div>
+                <div class="campus-card">
+                    <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&q=80&w=600"
+                        alt="Library">
+                    <div class="card-overlay">
+                        <h3>Library</h3>
+                    </div>
+                </div>
+                <div class="campus-card">
+                    <img src="images (2).jpg" alt="Sports Complex">
+                    <div class="card-overlay">
+                        <h3>Sports Complex</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple JavaScript for mobile menu toggle
+        document.querySelector('.menu-button').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+
+        // Simple slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        document.querySelector('.prev').addEventListener('click', () => showSlide(currentSlide - 1));
+        document.querySelector('.next').addEventListener('click', () => showSlide(currentSlide + 1));
+
+        // Auto-advance slides
+        setInterval(() => showSlide(currentSlide + 1), 5000);
+    </script>
+</body>
+
+</html>
