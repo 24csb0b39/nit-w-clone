@@ -85,8 +85,9 @@ body {
 
 /* Announcements */
 .announcements {
-  background-color: #dc2626;
-  color: white;
+  background-color: white;
+  color: black;
+  
   padding: 0.5rem 0;
   overflow: hidden;
 }
